@@ -7,6 +7,7 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -36,13 +37,21 @@ function Home() {
               </i>
             </p>
 
+            <Link to="/about">
             <Button
-                variant="primary"
-                style={{ maxWidth: "250px", marginTop: "25px"}}
-                
-              >
-              Learn more
-              </Button>
+                          variant="primary"
+                          style={{ maxWidth: "250px", marginTop: "25px"}}
+                        >
+                        Learn more
+                  </Button>
+            </Link>
+
+            <a href="/about" target="_blank" rel="noreferrer">
+                  
+          </a>
+        
+
+           
 
           </Col>
           <Col md={4} className="myAvtar">
@@ -70,22 +79,12 @@ function Home() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.linkedin.com/in/soumyajit4419/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/soumyajit4419"
+                  href="https://www.linkedin.com/in/rodrigue-kouete-790501129/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
-                  <AiFillInstagram />
+                 <FaLinkedinIn />
                 </a>
               </li>
             </ul>

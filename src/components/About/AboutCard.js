@@ -8,23 +8,24 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Soumyajit Behera </span>
-            from <span className="purple"> Bhubaneswar, India.</span>
-            <br /> I am a final year student pursuing an Integrated MSc (IMSc)
-            in Maths and Computing at BIT Mesra.
-            <br />
-            Additionally, I am currently employed as a software developer at
-            Juspay.
-            <br />
+            <p /> I am a full-stack developer with 5+ years of experience having worked on a dozen high-impact market-supporting projects developed 
+            around agile Scrum methodology and deployed on cloud infrastructures with 50,000+ users. 
+            <br/>
+            I am versatile with intervention both in the back end with technologies like Java, NodeJs, and Python and front end with technologies like Angular, React.
+             I have a solid knowledge of Docker, Kubernetes, Helm, and Terraform too.
+            <p />
+            <p>
+            One of my favorite exercises is modeling and implementing BPM solutions. I use <span className="purple"> Camunda BPM</span> for this task
+            </p>
             <br />
             Apart from coding, some other activities that I love to do!
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing Games
+              <ImPointRight /> Playing football
             </li>
             <li className="about-activity">
-              <ImPointRight /> Writing Tech Blogs
+              <ImPointRight /> Coaching
             </li>
             <li className="about-activity">
               <ImPointRight /> Travelling
@@ -32,9 +33,9 @@ function AboutCard() {
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
+            "Innovate and improve the living conditions of users"{" "}
           </p>
-          <footer className="blockquote-footer">Soumyajit</footer>
+          <footer className="blockquote-footer">Rodrigue</footer>
         </blockquote>
       </Card.Body>
     </Card>
