@@ -1,97 +1,73 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/profile-pic.png";
-import Tilt from "react-parallax-tilt";
-import {
-  AiFillGithub,
-  AiFillInstagram,
-} from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import "./Home.css";
 
 function Home() {
   return (
-    <Container fluid className="home-about-section" id="about">
+    <section className="home-section">
       <Container>
-        <Row>
-          <Col md={8} className="home-about-description">
-            Hello, I am
-            <h1 style={{ fontSize: "2.6em" }}>
-              Rodrigue <b className="purple"> KOUETE </b>
-            </h1>
-            <h5> Software consultant from Douala, Cameroon</h5>
-            <p className="home-about-body">
-              I'm very passionate and dedicated to my work.
-              With 6 years of experience as software developer,
-              I have designed and developed services for customers of all sizes.
+        <Row className="justify-content-center">
+          <Col lg={8} md={10} className="text-center">
+            <div className="image-wrapper">
+              <div className="image-container">
+                <img
+                  src={myImg}
+                  alt="Rodrigue KOUETE"
+                  className="profile-image"
+                />
+              </div>
+            </div>
 
-              <br />
-              <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="purple">Web/Desktop Technologies and Products </b> and
-                also in areas related to &nbsp;
-                <b className="purple">
-                  Business Process Management (BPM).
-                </b>
-              </i>
-            </p>
+            <div className="content-wrapper">
+              <span className="header-badge">DevOps Engineer</span>
 
-            <Link to="/about">
-            <Button
-                          variant="primary"
-                          style={{ maxWidth: "250px", marginTop: "25px"}}
-                        >
-                        Learn more
-                  </Button>
-            </Link>
+              <h1 className="main-heading">
+                <span className="greeting">Hi, I am</span>
+                <span className="name">Rodrigue KOUETE</span>
+                <span className="tagline">
+                  Crafting scalable solutions with DevOps & BPM expertise
+                </span>
+              </h1>
 
-            <a href="/about" target="_blank" rel="noreferrer">
-                  
-          </a>
-        
+              <p className="description">
+                I'm a DevOps Engineer with 8+ years of experience in cloud
+                architecture and software development. Expert in Python and Java
+                development, with a passion for Business Process Management
+                (Camunda, Airflow). Specializing in microservices, AWS cloud
+                infrastructure, and DevOps practices including containerization
+                (Docker, K8s) and infrastructure as code.
+              </p>
 
-           
-
-          </Col>
-          <Col md={4} className="myAvtar">
-            <Tilt>
-              <img src={myImg} className="img-fluid avatar" alt="avatar" />
-            </Tilt>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={8}></Col>
-          <Col md={4} className="home-about-social">
-            <p>
-              Feel free to <span className="purple">connect </span>with me
-            </p>
-            <ul className="home-about-social-links">
-              <li className="social-icons">
-                <a
-                  href="https://github.com/rkouete"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+              <div className="social-links">
+              <button
+                  type="button"
+                  className="social-link"
+                  onClick={() => window.open("https://github.com/rkouete", "_blank")}
                 >
                   <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/rodrigue-kouete-790501129/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
+                </button>
+
+                <button
+                  type="button"
+                  className="social-link"
+                  onClick={() => window.open("https://www.linkedin.com/in/rodrigue-kouete-790501129/", "_blank")}
                 >
-                 <FaLinkedinIn />
-                </a>
-              </li>
-            </ul>
+                  <FaLinkedinIn />
+                </button>
+                <Link to="/contact" className="primary-btn">
+                  Let's Talk
+                </Link>
+              </div>
+            </div>
           </Col>
         </Row>
       </Container>
-    </Container>
+    </section>
   );
 }
+
 export default Home;

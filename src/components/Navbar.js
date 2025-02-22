@@ -51,8 +51,14 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+              <Nav.Link 
+                as={Link} 
+                to="/" 
+                onClick={() => updateExpanded(false)}
+                title="Home"
+                className="nav-icon"
+              >
+                <AiOutlineHome />
               </Nav.Link>
             </Nav.Item>
 
@@ -61,8 +67,10 @@ function NavBar() {
                 as={Link}
                 to="/about"
                 onClick={() => updateExpanded(false)}
+                title="About"
+                className="nav-icon"
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                <AiOutlineUser />
               </Nav.Link>
             </Nav.Item>
 
@@ -71,11 +79,10 @@ function NavBar() {
                 as={Link}
                 to="/project"
                 onClick={() => updateExpanded(false)}
+                title="Projects"
+                className="nav-icon"
               >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
-                Projects
+                <AiOutlineFundProjectionScreen />
               </Nav.Link>
             </Nav.Item>
 
@@ -84,19 +91,22 @@ function NavBar() {
                 as={Link}
                 to="/resume"
                 onClick={() => updateExpanded(false)}
+                title="Resume"
+                className="nav-icon"
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <CgFileDocument />
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
-                // href="https://soumyajitblogs.vercel.app/"
-                href = "#"
-                target="_blank"
-                rel="noreferrer"
+                as={Link}
+                to="/blog"
+                onClick={() => updateExpanded(false)}
+                title="Blog"
+                className="nav-icon"
               >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
+                <ImBlog />
               </Nav.Link>
             </Nav.Item>
           </Nav>
